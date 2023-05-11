@@ -51,4 +51,20 @@ $(function () {
     btn.title = value;
     btn.className = value;
   }
+
+  // Email Form
+  $("#submit-btn").on("click", submitForm);
+
+  $("#email-input").on("keypress", function (e) {
+    if (e.key === "Enter") {
+      submitForm(e);
+    }
+  });
+
+  function submitForm(e) {
+    e.preventDefault();
+
+    const value = $("#email-input").val();
+    alert(value);
+  }
 });
