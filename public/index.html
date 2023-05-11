@@ -70,7 +70,60 @@
       <div class="vertical-line"></div>
     </section>
     <!-- End of Quote -->
+    <!-- Read More -->
+    <section id="read-more">
+      <img src="./images/surfing-beach.jpg" id="read-image" alt="alt-here" />
+      <section id="video-container">
+        <video id="video-element" poster="./images/surf-header.jpg">
+          <source
+            src="https://www.w3schools.com/html/mov_bbb.mp4"
+            type="video/mp4"
+          />
+          <source
+            src="https://www.w3schools.com/html/mov_bbb.ogg"
+            type="video/ogg"
+          />
+          <source
+            src="https://www.w3schools.com/html/mov_bbb.webm"
+            type="video/webm"
+          />
+          <object
+            data="https://www.w3schools.com/html/mov_bbb.mp4"
+            width="470"
+            height="255"
+          >
+            <embed
+              src="https://www.w3schools.com/html/mov_bbb.swf"
+              width="470"
+              height="255"
+            />
+          </object>
+        </video>
+        <div
+          id="play-pause-button"
+          class="play"
+          role="button"
+          title="play"
+          accesskey="P"
+        >
+          <img src="./svg/play-btn.svg" id="play" alt="play-video" />
+          <img src="./svg/pause-btn.svg" id="pause" alt="pause-video" />
+        </div>
+      </section>
+      <section id="read-footer">
+        <p>
+          By better understanding the various aspects of surfing, you will
+          improve faster and have more fun in the water.
+        </p>
+        <a href="#">Read More</a>
+      </section>
+    </section>
+    <!-- End of Read More -->
     <!-- Boards Slider -->
+    <div id="shop-header">
+      <p>shop</p>
+      <p>Surfboards</p>
+    </div>
     <section id="slider">
       <div class="slide-image" data-js="1">
         <img src="./png/board-2.png" id="photo" alt="1ss" />
@@ -133,6 +186,6 @@
         </p>
       </div>
     </section>
-    <!-- End of Boars Slider -->
+    <!-- End of Boards Slider -->
   </body>
 </html>
