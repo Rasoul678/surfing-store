@@ -7,7 +7,7 @@ $(function () {
     containerId: "#slider",
     observable: false,
     timeout: 5000,
-    animationDuration: 1500,
+    animationDuration: 800,
   });
 
   const player = document.getElementById("video-element");
