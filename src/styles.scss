@@ -548,3 +548,52 @@ header {
     }
   }
 }
+
+#camp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin: 4rem 6rem 4rem 0;
+  margin-top: 6rem;
+
+  img {
+    width: 50vw;
+    height: 23rem;
+  }
+
+  #training-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    font-family: "Ubuntu";
+
+    p:first-child {
+      color: #999;
+      font-weight: bold;
+      letter-spacing: 0.3rem;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    p:nth-child(2) {
+      color: #333333;
+      font-weight: bold;
+      font-size: 2.5rem;
+      margin-left: 2.5rem;
+      width: 25rem;
+    }
+
+    a {
+      color: #5da8ef;
+      letter-spacing: 0.3rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba(93, 168, 239, 1);
+      font-weight: bold;
+    }
+  }
+}
