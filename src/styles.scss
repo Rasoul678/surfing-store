@@ -178,7 +178,7 @@ header {
   display: flex;
   justify-content: end;
   align-items: center;
-  margin: 2rem 4rem;
+  margin: 2rem 4rem 4rem;
   position: relative;
 }
 
@@ -224,4 +224,35 @@ header {
   #slide-number {
     color: #5da8ef;
   }
+}
+
+#quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  margin: 2rem 0;
+
+  p:first-child {
+    width: 50%;
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+
+  p:nth-child(2) {
+    text-align: center;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+  }
+}
+
+.vertical-line {
+  border-left: 0.2rem solid #5da3ef;
+  height: 70px;
 }
