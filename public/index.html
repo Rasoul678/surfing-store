@@ -6,27 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Surfing Board</title>
   </head>
-  <body>
-    <div id="app">
+  <body id="app">
+    <nav id="navbar">
+      <img
+        id="logo"
+        src="./images/surfing-board.png"
+        alt="surfing-board-logo"
+      />
+      <ul>
+        <li>stories</li>
+        <li>events</li>
+        <li>places</li>
+        <li>boards</li>
+      </ul>
+    </nav>
+    <header>
+      <section id="header-text-box">
+        <p id="text-1">your</p>
+        <p id="text-2">Beautiful Escape</p>
+        <p id="text-3">
+          One of the greatest things about the sport of surfing is that you need
+          only three things: your body, a surfboard, and a wave.
+        </p>
+      </section>
+
       <section id="carousel">
+        <div class="slide-image" data-js="1" id="slide1"></div>
+        <div class="slide-image" data-js="2" id="slide2"></div>
+        <div class="slide-image" data-js="3" id="slide3"></div>
+        <div class="slide-image" data-js="4" id="slide4"></div>
+        <div class="slide-image" data-js="5" id="slide5"></div>
+      </section>
+      <section id="arrow-box">
         <img
           src="./svg/arrow_left.svg"
           alt="Left Carousel Arrow"
           class="arrow"
           id="left-arrow"
         />
+        <div id="counter">
+          <span id="slide-number">1 </span><span>/</span
+          ><span id="total-count"> 5</span>
+        </div>
         <img
           src="./svg/arrow_right.svg"
           alt="Right Carousel Arrow"
           class="arrow"
           id="right-arrow"
         />
-        <div class="slide-image" id="slide1"></div>
-        <div class="slide-image" id="slide2"></div>
-        <div class="slide-image" id="slide3"></div>
-        <div class="slide-image" id="slide4"></div>
-        <div class="slide-image" id="slide5"></div>
       </section>
-    </div>
+    </header>
   </body>
 </html>
