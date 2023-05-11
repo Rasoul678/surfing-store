@@ -1,1 +1,3 @@
-console.log("It Works!");
+import { addTag } from "./components/first";
+
+addTag();
