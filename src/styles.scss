@@ -1,3 +1,6 @@
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 500px;
+
 #app {
   font-family: "Courier New", Courier, monospace;
   color: #0b0c11;
@@ -72,6 +75,11 @@
 #carousel {
   width: 75%;
   height: 450px;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 100%;
+    height: 350px;
+  }
 }
 
 #slider {
@@ -98,6 +106,14 @@
   margin: 0 1rem;
   position: relative;
   top: 2rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 50%;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
 
   span.back {
     display: block;
@@ -185,6 +201,10 @@ header {
   align-items: center;
   margin: 2rem 4rem 4rem;
   position: relative;
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+  }
 }
 
 #header-text-box {
@@ -192,6 +212,12 @@ header {
   left: 0rem;
   z-index: 100;
   width: 700px;
+
+  @media (max-width: $breakpoint-tablet) {
+    position: relative;
+
+    width: 100%;
+  }
 
   #text-1 {
     color: #5da8ef;
@@ -221,6 +247,11 @@ header {
   bottom: 0;
   display: flex;
   align-items: center;
+
+  @media (max-width: $breakpoint-tablet) {
+    left: calc(50% - 2.5rem);
+    bottom: -2rem;
+  }
 }
 
 #counter {
@@ -291,11 +322,20 @@ header {
   height: 500px;
   margin: 2rem 4rem;
 
+  @media (max-width: $breakpoint-tablet) {
+    height: auto;
+  }
+
   #read-image {
     height: 22rem;
     position: absolute;
     top: 0;
     left: 3rem;
+
+    @media (max-width: $breakpoint-tablet) {
+      position: relative;
+      left: 0rem;
+    }
   }
 
   section#video-container {
@@ -303,8 +343,17 @@ header {
     top: 5rem;
     right: 0;
 
+    @media (max-width: $breakpoint-tablet) {
+      position: relative;
+      top: 0rem;
+      width: 35.1rem;
+    }
+
     video {
       width: 40rem;
+      @media (max-width: $breakpoint-tablet) {
+        width: 35.1rem;
+      }
     }
   }
 
@@ -319,6 +368,14 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: start;
+
+    @media (max-width: $breakpoint-tablet) {
+      position: relative;
+      left: 0rem;
+      bottom: 0rem;
+      align-items: center;
+      width: auto;
+    }
 
     a {
       color: #333;
@@ -367,6 +424,10 @@ header {
   align-items: center;
   position: relative;
 
+  @media (max-width: $breakpoint-mobile) {
+    width: 75%;
+  }
+
   #slider-arrows {
     display: flex;
     justify-content: space-between;
@@ -374,6 +435,16 @@ header {
     width: calc(100% + 10rem);
     left: -5rem;
     top: 55%;
+
+    @media (max-width: $breakpoint-tablet) {
+      width: calc(100% + 6rem);
+      left: -2.5rem;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      width: calc(100% + 6rem);
+      left: -2.5rem;
+    }
 
     img {
       width: 3rem;
@@ -399,9 +470,18 @@ header {
   margin: 4rem 6rem;
   margin-top: 6rem;
 
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
   img {
     width: 60%;
     height: 25rem;
+
+    @media (max-width: $breakpoint-tablet) {
+      width: 100%;
+    }
   }
 
   #training-description {
@@ -411,6 +491,10 @@ header {
     align-items: start;
     gap: 3rem;
     font-family: "Ubuntu";
+
+    @media (max-width: $breakpoint-tablet) {
+      align-items: center;
+    }
 
     p:first-child {
       color: #333;
@@ -449,6 +533,10 @@ header {
   margin: 4rem 6rem 4rem 23%;
   margin-top: 6rem;
 
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+  }
+
   img {
     width: 32rem;
     height: 23rem;
@@ -461,6 +549,10 @@ header {
     align-items: start;
     gap: 3rem;
     font-family: "Ubuntu";
+
+    @media (max-width: $breakpoint-tablet) {
+      align-items: center;
+    }
 
     p:first-child {
       color: #333;
@@ -561,9 +653,18 @@ header {
   margin: 4rem 6rem 4rem 0;
   margin-top: 6rem;
 
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+    margin: 4rem 6rem;
+  }
+
   img {
     width: 50vw;
     height: 23rem;
+
+    @media (max-width: $breakpoint-tablet) {
+      width: 100%;
+    }
   }
 
   #training-description {
