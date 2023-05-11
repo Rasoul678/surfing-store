@@ -1,13 +1,18 @@
-export const initCarousel = (sliderID = "#carousel") => {
-  $("#left-arrow").on({ click: previousSlide });
-  $("#right-arrow").on({ click: nextSlide });
-  $(`${sliderID} .slide-image`).on({ click: nextSlide });
+export const initCarousel = ({
+  containerId = "#carousel",
+  observable = true,
+  timeout = 3000,
+  animationDuration = 1000,
+}) => {
+  $(`#left-arrow-${containerId.slice(1)}`).on({ click: previousSlide });
+  $(`#right-arrow-${containerId.slice(1)}`).on({ click: nextSlide });
+  $(`${containerId} .slide-image`).on({ click: nextSlide });
 
-  let interval = window.setInterval(rotateSlides, 3000);
+  let interval = window.setInterval(rotateSlides, timeout);
 
   let options = {
     threshold: [0.5],
-    root: $(`${sliderID}`)[0],
+    root: $(`${containerId}`)[0],
     rootMargin: "10px",
   };
 
@@ -21,22 +26,22 @@ export const initCarousel = (sliderID = "#carousel") => {
 
   let observer = new IntersectionObserver(onEntry, options);
 
-  const elements = Array.from($(`${sliderID} .slide-image`));
+  const elements = Array.from($(`${containerId} .slide-image`));
 
-  for (let elm of elements) {
-    observer.observe(elm);
+  if (observable) {
+    for (let elm of elements) {
+      observer.observe(elm);
+    }
   }
 
   function rotateSlides() {
     // animation will go here
-    let firstSlide = $(sliderID).find("div:first");
+    let firstSlide = $(containerId).find("div:first");
     let width = firstSlide.width();
 
-    // setSlideNumber(+firstSlide[0].dataset.js);
-
-    firstSlide.animate({ marginLeft: -width }, 1000, function () {
+    firstSlide.animate({ marginLeft: -width }, animationDuration, function () {
       // What to do after the animation
-      let lastSlide = $(sliderID).find("div:last");
+      let lastSlide = $(containerId).find("div:last");
       lastSlide.after(firstSlide);
       firstSlide.css({ marginLeft: 0 });
     });
@@ -44,25 +49,29 @@ export const initCarousel = (sliderID = "#carousel") => {
 
   function nextSlide() {
     window.clearInterval(interval);
-    let currentSlide = $(sliderID).find("div:first");
+    let currentSlide = $(containerId).find("div:first");
     let width = currentSlide.width();
-    currentSlide.animate({ marginLeft: -width }, 1000, function () {
-      let lastSlide = $(sliderID).find("div:last");
-      lastSlide.after(currentSlide);
-      currentSlide.css({ marginLeft: 0 });
-      interval = window.setInterval(rotateSlides, 3000);
-    });
+    currentSlide.animate(
+      { marginLeft: -width },
+      animationDuration,
+      function () {
+        let lastSlide = $(containerId).find("div:last");
+        lastSlide.after(currentSlide);
+        currentSlide.css({ marginLeft: 0 });
+        interval = window.setInterval(rotateSlides, timeout);
+      }
+    );
   }
 
   function previousSlide() {
     window.clearInterval(interval);
-    let currentSlide = $(sliderID).find("div:first");
+    let currentSlide = $(containerId).find("div:first");
     let width = currentSlide.width();
-    let previousSlide = $(sliderID).find("div:last");
+    let previousSlide = $(containerId).find("div:last");
     previousSlide.css({ marginLeft: -width });
     currentSlide.before(previousSlide);
-    previousSlide.animate({ marginLeft: 0 }, 1000, function () {
-      interval = window.setInterval(rotateSlides, 3000);
+    previousSlide.animate({ marginLeft: 0 }, animationDuration, function () {
+      interval = window.setInterval(rotateSlides, timeout);
     });
   }
 
