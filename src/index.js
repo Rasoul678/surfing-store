@@ -1,3 +1,6 @@
-import { addTag } from "./components/first";
+import "./styles.scss";
+import { initCarousel } from "./components/carousel";
 
-addTag();
+$(function () {
+  initCarousel();
+});

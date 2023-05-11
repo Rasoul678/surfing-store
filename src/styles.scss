@@ -1,0 +1,71 @@
+#app {
+  max-width: 500px;
+  max-height: 200px;
+}
+
+#slide1 {
+  background-image: url("./assets/img/surf-header.jpg");
+}
+
+#slide2 {
+  background-image: url("./assets/img/surf-header.jpg");
+}
+
+#slide3 {
+  background-image: url("./assets/img/surf-header.jpg");
+}
+
+#slide4 {
+  background-image: url("./assets/img/surf-header.jpg");
+}
+
+#slide5 {
+  background-image: url("./assets/img/surf-header.jpg");
+}
+
+.slide-image {
+  width: 100vw;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+}
+
+#carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.arrow {
+  width: 6%;
+  background-color: antiquewhite;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  cursor: pointer;
+}
+
+#right-arrow {
+  right: 20px;
+  fill: #fff;
+}
+
+#left-arrow {
+  left: 20px;
+}
+
+@media (max-device-width: 1024px) {
+  .arrow {
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .arrow {
+    width: 7%;
+  }
+}
