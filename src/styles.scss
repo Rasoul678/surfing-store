@@ -255,7 +255,9 @@ header {
 
 .vertical-line {
   border-left: 0.2rem solid #5da3ef;
-  height: 70px;
+  height: 80px;
+  margin: auto;
+  width: 1px;
 }
 
 #shop-header {
@@ -396,6 +398,56 @@ header {
   img {
     width: 60%;
     height: 25rem;
+  }
+
+  #training-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 3rem;
+    font-family: "Ubuntu";
+
+    p:first-child {
+      color: #333;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+
+      &:first-letter {
+        text-decoration: underline;
+        text-decoration-color: rgba(93, 168, 239, 1);
+        text-underline-offset: 0.6rem;
+      }
+    }
+
+    p:nth-child(2) {
+      color: #616161;
+    }
+
+    a {
+      color: #333;
+      letter-spacing: 0.3rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba(93, 168, 239, 1);
+      font-weight: bold;
+    }
+  }
+}
+
+#break {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  margin: 4rem 6rem 4rem 23%;
+  margin-top: 6rem;
+
+  img {
+    width: 32rem;
+    height: 23rem;
   }
 
   #training-description {
